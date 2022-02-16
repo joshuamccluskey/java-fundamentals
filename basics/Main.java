@@ -3,7 +3,7 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;
 
-public class ExampleSyntax {
+public class Main {
   public static void main(String[] args) {
 
     pluralize("dog", 2);
