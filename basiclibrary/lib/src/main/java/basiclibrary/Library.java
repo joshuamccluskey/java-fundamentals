@@ -49,8 +49,8 @@ public class Library {
     //Average array method
     public double average (double[] arr) {
         for (double num : arr){
-            sum = sum + num;
-            counter ++;
+            sum += num;
+            counter++;
         }
       return Math.ceil(sum / counter) ;
     }
@@ -60,18 +60,18 @@ public class Library {
         double[] averages = new double[arr.length];
         //2d array average
         for (int i = 0; i < arr.length; i++){
-            for (int j = 0; j < arr.length; j++){
-                sum = sum + arr[i][j];
-                counter ++;
+            for (int j = 0; j < arr[i].length; j++){
+                sum += arr[i][j];
+                counter++;
             }
             averages[i] = sum / counter;
         }
       //Getting Min value of the array
         double minValue = averages[0];
-        for (int j = 0; j < averages.length; j++) {
-                if (averages[j] < minValue ) {
-                    minValue = averages[j];
-                }
+        for (double average : averages) {
+            if (average < minValue) {
+                minValue = average;
+            }
         }
         return minValue ;
     }
