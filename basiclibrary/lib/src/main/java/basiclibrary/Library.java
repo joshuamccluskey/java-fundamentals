@@ -5,7 +5,9 @@ package basiclibrary;
 
 
 
-import java.util.Random;
+
+import java.util.*;
+
 
 public class Library {
     public boolean someLibraryMethod() {
@@ -75,4 +77,76 @@ public class Library {
         }
         return minValue ;
     }
-}
+    // getMin Method
+    public int getMin (List<Integer> unique) {
+        int minValue = (int) unique.get(0);
+        for (int i = 0; i < unique.stream().count(); i++) {
+                if ((int) unique.get(0) < minValue ) {
+                    minValue = (int) unique.get(0);
+                }
+        }
+        return minValue ;
+    }
+    //getMax method
+    public int getMax (List<Integer> unique) {
+        int maxValue = (int) unique.get(0);
+
+            for (int i = 0; i < unique.stream().count(); i++) {
+                if ((int) unique.get(i) > maxValue) {
+                    maxValue = (int) unique.get(i);
+                }
+        }
+        return maxValue;
+    }
+    // minMaxTemp Analyzes min and max temp and the missing temps that were not in data set
+    public void minMaxTemp (int [][] arr) {
+        Map<Integer, Integer> map = new LinkedHashMap<>();
+
+        for (int[] row : arr)
+            for (int col : row)
+                map.put(col, map.getOrDefault(col, 0) + 1);
+
+        List<Integer> unique = new ArrayList<>();
+
+        for (Map.Entry<Integer, Integer> entry : map.entrySet())
+            if (entry.getValue() == 1)
+                unique.add(entry.getKey());
+
+        Collections.sort(unique);
+        System.out.println("minMaxTemp() unique values: " + unique);
+        int maxTemp  = getMax(unique);
+        int minTemp = getMin(unique);
+        System.out.println("High: " + getMax(unique));
+        System.out.println("Low: " + getMin(unique));
+        for (int temp : unique) {
+            if (temp != minTemp && temp <= maxTemp) {
+                System.out.println("Never saw temperature: " + minTemp);
+                minTemp++;
+            }
+            if (temp == minTemp && temp <= maxTemp) {
+                minTemp++;
+            }
+        }
+      }
+
+    //tally gets the number of votes and declares the winner of the election
+      public String tally (List<String> arr) {
+          Map<String, Integer> votesMap = new LinkedHashMap<>();
+
+          for (String vote : arr)
+          {
+              if (votesMap.containsKey(vote))
+              {
+                  int numOfTimes = votesMap.get(vote);
+                  votesMap.put(vote, numOfTimes + 1);
+              }
+              else
+              {
+                  votesMap.put(vote, 1);
+              }
+          }
+         System.out.println("tall() Votes: " + votesMap);
+          return Collections.max(votesMap.entrySet(), Comparator.comparingInt(Map.Entry::getValue)).getKey();
+      }
+    }
+
