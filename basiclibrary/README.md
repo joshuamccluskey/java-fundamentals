@@ -2,7 +2,7 @@
 
 ## Java Fundamentals
 
-### Basics:
+### Basic Library:
 
 ### Contributor: Joshua McCluskey
 
@@ -14,3 +14,10 @@
 - arrayOfArrays: Returns minimum average of 2 dimensional array
 
 #### Work Time: 5 Hours
+
+#### Methods:
+
+- minMaxTemp() Analyzes min and max temp and the missing weather temps that were not in data set
+- tall() gets the number of votes and declares the winner of the election
+
+### Work Time: 3 Hours
