@@ -3,23 +3,28 @@
  */
 package linter;
 
-import javax.print.DocFlavor;
+
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.nio.file.Path;
-import java.io.File;
+
 
 public class App {
 
-    public static void main(String[] args) {
-        System.out.println("hello world");
-
+    public static void main(String[] args)  {
+        try {
+            linter(args[0]);
+        } catch (IOException e) {
+            System.out.println("Please use absolute file path. Your path " + args[0] +
+                    " was not found. Example file path: /Users/joshuamccluskey/projects/courses/401/java-fundamentals/linter/app/src/main/resources/gates.js");
+            e.printStackTrace();
+        }
     }
 
-    public void linter () throws IOException {
-        Path linterPath = Paths.get("/Users/joshuamccluskey/projects/courses/401/java-fundamentals/linter/app/src/main/resources/gates.js");
+    public static void linter(String filePath) throws IOException {
+        Path linterPath = Paths.get(filePath);
         System.out.println(linterPath.toAbsolutePath());
 
         String semicolon = ";";
