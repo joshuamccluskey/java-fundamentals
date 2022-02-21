@@ -10,9 +10,16 @@ import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void test_linter() throws IOException {
+    @Test void test_linter() {
         App sut = new App();
-        sut.linter();
+        try {
+            sut.linter("/Users/joshuamccluskey/projects/courses/401/java-fundamentals/linter/app/src/main/resources/gates.js");
+        }
+        catch (IOException e) {
+            System.out.println("Please replace the file path to the absolute path of gates.js on your computer. " +
+                    "Example: /Users/joshuamccluskey/projects/courses/401/java-fundamentals/linter/app/src/main/resources/gates.js");
+            e.printStackTrace();
+        }
 
     }
 }
