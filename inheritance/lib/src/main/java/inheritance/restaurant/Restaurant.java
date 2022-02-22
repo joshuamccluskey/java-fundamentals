@@ -1,18 +1,33 @@
 package inheritance.restaurant;
 
 
+import inheritance.restaurant.review.Review;
+
+
+
 public class Restaurant {
-    public String name;
-    public int stars;
-    public int dollarsSigns;
+    public static String name;
+    public static int stars;
+    public static int dollarSigns;
+
 
     public Restaurant(String name, int stars, int dollarsSigns)
     {
         this.name = name;
         this.stars = stars;
-        this.dollarsSigns =dollarsSigns;
+        this.dollarSigns =dollarsSigns;
 
     }
+
+//    public void addReview (String name, int stars, int dollarSigns) {
+//        name = this.getName();
+//        this.setName(name);
+//        stars = this.getStars();
+//        this.setStars(stars);
+//        dollarSigns = this.getDollarsSigns();
+//        this.setDollarsSigns(dollarSigns);
+//    }
+
 
     public String getName(){
         return name;
@@ -31,19 +46,21 @@ public class Restaurant {
     }
 
     public int getDollarsSigns(){
-        return dollarsSigns;
+        return dollarSigns;
     }
 
     public void setDollarsSigns(int dollarsSigns){
-        this.dollarsSigns = dollarsSigns;
+        this.dollarSigns = dollarsSigns;
     }
+
+
 
     @Override
     public String  toString() {
         return "Restaurant{" +
                 "name='" + name + '\'' +
                 ", stars=" + stars +
-                ", dollarsSigns=" + dollarsSigns +
+                ", dollarsSigns=" + dollarSigns +
                 '}';
     }
 }
