@@ -1,37 +1,33 @@
 package inheritance.restaurant;
 
 
+import inheritance.reviewable.Reviewer;
+
 import java.util.ArrayList;
 
-public class Restaurant {
+public class Restaurant implements Reviewer {
     public static String name;
     public static int stars;
     public static int dollarSigns;
-    public static ArrayList<Object> reviews = new ArrayList<Object>();
+    public static ArrayList<Object> restaurantReviews;
 
 
 
-    public Restaurant(String name, int stars, int dollarsSigns, ArrayList<Object> reviews)
+    public Restaurant(String name, int stars, int dollarsSigns)
     {
         this.name = name;
         this.stars = stars;
         this.dollarSigns = dollarsSigns;
-        this.reviews = reviews;
+        restaurantReviews = new ArrayList<>();
 
     }
 
-//    public void addReview (String name, int stars, int dollarSigns) {
-//        name = this.getName();
-//        this.setName(name);
-//        stars = this.getStars();
-//        this.setStars(stars);
-//        dollarSigns = this.getDollarsSigns();
-//        this.setDollarsSigns(dollarSigns);
-//    }
 
 
-
-
+    @Override
+    public void addReview() {
+        //TODO Build out Add Review
+    }
 
     @Override
     public String  toString() {

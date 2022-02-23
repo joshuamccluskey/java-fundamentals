@@ -1,15 +1,25 @@
 package inheritance.theater;
 
 
+import inheritance.reviewable.Reviewer;
+
 import java.util.ArrayList;
+import java.util.List;
 
-public class Theater {
+public class Theater implements Reviewer {
     public static String name;
-    public static ArrayList<String> movies = new ArrayList<>();
+    public static ArrayList<String> movies;
+    public static ArrayList<Object> theaterReviews;
 
-    public Theater(String name, ArrayList<String> movies) {
+    public Theater(String name) {
         this.name = name;
-        this.movies = movies;
+        this.movies = new ArrayList<>(List.of("The Matrix: Resurrection",
+                "Dog",
+                "Spiderman: No Way Home",
+                "Blacklight"
+        ));
+        theaterReviews = new ArrayList<>();
+
     }
 
     public void addMovie (ArrayList<String> movies, String addedMovie){
@@ -22,6 +32,10 @@ public class Theater {
         this.movies = movies;
     }
 
+    @Override
+    public void addReview() {
+        //TODO Build out add review method
+    }
 
     @Override
     public String toString() {

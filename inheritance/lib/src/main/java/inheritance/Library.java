@@ -28,8 +28,12 @@ public class Library {
     }
 
     public boolean newShop(){
-        Shop myShop = new Shop("Target", "Super market", 2);
-        System.out.println(myShop);
+//        Shop targetShop = new Shop("Target", "Super market", 2, 1);
+        Shop bartelsShop = new Shop("Bartels", "Pharmacy", 1, 1);
+        bartelsShop.addReview();
+        System.out.println(bartelsShop);
+//        System.out.println(targetShop);
+
         return true;
     }
 
@@ -40,7 +44,7 @@ public class Library {
                         "Spiderman: No Way Home",
                         "Blacklight"
                 ));
-        Theater myTheater = new Theater("AMC", myMovies );
+        Theater myTheater = new Theater("AMC" );
         myTheater.addMovie(myMovies, "Moonfall");
         myTheater.removeMovie(myMovies, "The Matrix: Resurrection");
         System.out.println(myTheater);
