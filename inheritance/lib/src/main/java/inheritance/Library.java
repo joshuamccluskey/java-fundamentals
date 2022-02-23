@@ -5,7 +5,7 @@ package inheritance;
 
 
 import inheritance.restaurant.Restaurant;
-import inheritance.restaurant.review.Review;
+import inheritance.review.Review;
 
 
 public class Library {
@@ -17,8 +17,8 @@ public class Library {
     }
 
     public boolean newReview() {
-        Review myReview = new Review( "this was great", "Josh", 5);
-        System.out.println(myReview);
+//        Review myReview = new Review( "this was great", "Josh", 5);
+//        System.out.println(myReview);
         return true;
     }
 

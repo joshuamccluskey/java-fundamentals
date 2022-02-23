@@ -1,14 +1,11 @@
 package inheritance.restaurant;
 
 
-import inheritance.restaurant.review.Review;
-
-
-
 public class Restaurant {
     public static String name;
     public static int stars;
     public static int dollarSigns;
+
 
 
     public Restaurant(String name, int stars, int dollarsSigns)

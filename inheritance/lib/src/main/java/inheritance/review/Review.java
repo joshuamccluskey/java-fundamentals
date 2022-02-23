@@ -1,13 +1,18 @@
-package inheritance.restaurant.review;
+package inheritance.review;
 
-import inheritance.restaurant.Restaurant;
 
-public class Review extends Restaurant {
-    public static String body;
+
+public abstract class Review  {
+    public static String name;
+    public static int rateStars;
+    public static int dollarSigns;
     public static String author;
-    private static int rateStars;
-    public Review( String body, String author, int rateStars){
-        super(Restaurant.name, Restaurant.stars, Restaurant.dollarSigns);
+    public static String body;
+
+
+    public Review( String name , int dollarSigns, String body, String author, int rateStars){
+        this.name =name;
+        this.dollarSigns = dollarSigns;
         this.body = body;
         this.author = author;
         this.rateStars = rateStars;
@@ -26,12 +31,11 @@ public class Review extends Restaurant {
     public String toString() {
         return "Review{" +
                 "name='" + name + '\'' +
-                ", stars=" + stars +
+                ", rateStars='"+ rateStars +
                 ", dollarsSigns=" + dollarSigns +
-                ", body='" + body + '\'' +
                 ", author='" + author + '\'' +
-                ", rateStars=" +
-                '}';
+                ", body='" + body + '\'' +
+                "'}";
     }
 }
 //    String body;
