@@ -6,6 +6,11 @@ package inheritance;
 
 import inheritance.restaurant.Restaurant;
 import inheritance.review.Review;
+import inheritance.shop.Shop;
+import inheritance.theater.Theater;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Library {
@@ -22,5 +27,24 @@ public class Library {
         return true;
     }
 
+    public boolean newShop(){
+        Shop myShop = new Shop("Target", "Super market", 2);
+        System.out.println(myShop);
+        return true;
+    }
+
+    public boolean newTheater(){
+        ArrayList<String> myMovies = new ArrayList<>(
+                List.of("The Matrix: Resurrection",
+                        "Dog",
+                        "Spiderman: No Way Home",
+                        "Blacklight"
+                ));
+        Theater myTheater = new Theater("AMC", myMovies );
+        myTheater.addMovie(myMovies, "Moonfall");
+        myTheater.removeMovie(myMovies, "The Matrix: Resurrection");
+        System.out.println(myTheater);
+        return true;
+    }
 
 }

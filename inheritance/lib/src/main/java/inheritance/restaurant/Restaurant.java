@@ -1,18 +1,22 @@
 package inheritance.restaurant;
 
 
+import java.util.ArrayList;
+
 public class Restaurant {
     public static String name;
     public static int stars;
     public static int dollarSigns;
+    public static ArrayList<Object> reviews = new ArrayList<Object>();
 
 
 
-    public Restaurant(String name, int stars, int dollarsSigns)
+    public Restaurant(String name, int stars, int dollarsSigns, ArrayList<Object> reviews)
     {
         this.name = name;
         this.stars = stars;
-        this.dollarSigns =dollarsSigns;
+        this.dollarSigns = dollarsSigns;
+        this.reviews = reviews;
 
     }
 
@@ -26,29 +30,6 @@ public class Restaurant {
 //    }
 
 
-    public String getName(){
-        return name;
-    }
-
-    public void setName(String name){
-        this.name = name;
-    }
-
-    public int getStars(){
-        return stars;
-    }
-
-    public void setStars(int stars){
-        this.stars = stars;
-    }
-
-    public int getDollarsSigns(){
-        return dollarSigns;
-    }
-
-    public void setDollarsSigns(int dollarsSigns){
-        this.dollarSigns = dollarsSigns;
-    }
 
 
 
