@@ -16,4 +16,14 @@ class LibraryTest {
         Library sut = new Library();
         assertTrue(sut.newReview(), "Yo you need to look over newReview");
     }
+
+    @Test void test_newShop() {
+        Library sut = new Library();
+        assertTrue(sut.newShop(), "Yo you need to look over newShop");
+    }
+
+    @Test void test_newTheater() {
+        Library sut = new Library();
+        assertTrue(sut.newTheater(), "Yo you need to look over newTheater");
+    }
 }

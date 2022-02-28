@@ -5,7 +5,12 @@ package inheritance;
 
 
 import inheritance.restaurant.Restaurant;
-import inheritance.restaurant.review.Review;
+import inheritance.review.Review;
+import inheritance.shop.Shop;
+import inheritance.theater.Theater;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Library {
@@ -17,10 +22,33 @@ public class Library {
     }
 
     public boolean newReview() {
-        Review myReview = new Review( "this was great", "Josh", 5);
-        System.out.println(myReview);
+//        Review myReview = new Review( "this was great", "Josh", 5);
+//        System.out.println(myReview);
         return true;
     }
 
+    public boolean newShop(){
+//        Shop targetShop = new Shop("Target", "Super market", 2, 1);
+        Shop bartelsShop = new Shop("Bartels", "Pharmacy", 1, 1);
+        bartelsShop.addReview();
+        System.out.println(bartelsShop);
+//        System.out.println(targetShop);
+
+        return true;
+    }
+
+    public boolean newTheater(){
+        ArrayList<String> myMovies = new ArrayList<>(
+                List.of("The Matrix: Resurrection",
+                        "Dog",
+                        "Spiderman: No Way Home",
+                        "Blacklight"
+                ));
+        Theater myTheater = new Theater("AMC" );
+        myTheater.addMovie(myMovies, "Moonfall");
+        myTheater.removeMovie(myMovies, "The Matrix: Resurrection");
+        System.out.println(myTheater);
+        return true;
+    }
 
 }
