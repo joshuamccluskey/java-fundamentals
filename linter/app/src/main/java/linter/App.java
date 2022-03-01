@@ -50,7 +50,7 @@ public class App {
                 continue;
             if (!currentLine.contains(semicolon)) {
                 colonsMap.put(lineNumber, false);
-                System.out.println("Line " + lineNumber + " Missing semicolon.");
+                System.out.println("Line " + lineNumber + ": Missing semicolon.");
             }
         }
 
