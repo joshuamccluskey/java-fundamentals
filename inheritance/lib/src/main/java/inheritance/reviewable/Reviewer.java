@@ -1,8 +1,11 @@
 package inheritance.reviewable;
 
+import inheritance.Review;
+
 public interface Reviewer {
 
-    public void addReview();
-
-    //All classes that need a review can implement this interface
+//    public addReview ()
+//    {
+//
+//    }
 }
