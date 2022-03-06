@@ -27,7 +27,7 @@ class TheaterTest {
         Theater sut = new Theater("AMC", 3,3);
         sut.getMovies();
         System.out.println(sut.getMovies());
-        assertEquals("[The Matrix: Resurrection, Dog, Spiderman: No Way Home, Blacklight]", sut.getMovies(), "Yo something is wrogn with get Movies");
+        assertEquals("[The Matrix: Resurrection, Dog, Spiderman: No Way Home, Blacklight]", sut.getMovies(), "Yo something is wrong with test_getMovies()");
     }
 
     @Test
@@ -39,16 +39,25 @@ class TheaterTest {
                 "Blacklight"
         ));
         sut.setMovies(newList);
-        System.out.println(sut.reviews);
-        assertEquals("[The Matrix: Resurrection, Free Guy, The Power of The Dog, Blacklight]", sut.getMovies(), "Yo something is wrogn with get Movies");
+        System.out.println(sut.getMovies());
+        assertEquals(true, "Yo something is wrong with test_setMovies()");
     }
 
     @Test
     void test_getTheaterReviews() {
+        Theater sut = new Theater("AMC" , 3, 3);
+        sut.addReview("Josh", "AMC", "AMC FTW", 3);
+        System.out.println();
+        assertTrue(true, "Yo there is something wrong with the test_getTheaterReviews()");
     }
 
     @Test
     void test_setTheaterReviews() {
+        Theater sut = new Theater("AMC" , 3, 3);
+        sut.addReview("Josh", "AMC", "AMC FTW", 3);
+        ArrayList newList =sut.getReviews();
+        sut.setReviews(newList);
+        assertTrue(true, "Yo there is something wrong with the test_setTheaterReviews()");
     }
 
     @Test
@@ -81,14 +90,17 @@ class TheaterTest {
 
     @Test
     void test_addReview() {
+        Theater sut = new Theater("AMC" , 3, 3);
+        sut.addReview("Josh", "AMC", "AMC FTW", 3);
+        assertTrue(true, "Yo there is something wrong with the test_addReview()");
     }
 
     @Test
     void test_testToString() {
+        Theater sut = new Theater("AMC" , 3, 3);
+        System.out.println(sut);
+        assertTrue(true, "Yo there is something wrong with the test_toString()");
+
     }
 
-
-
-//
-//        return true;
 }
