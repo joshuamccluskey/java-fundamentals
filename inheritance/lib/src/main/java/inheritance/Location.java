@@ -1,5 +1,7 @@
 package inheritance;
 
+import inheritance.reviewable.Review;
+
 import java.util.ArrayList;
 
 public class Location {
@@ -55,7 +57,7 @@ public class Location {
 
     public void addReview(String author, String name , String body,  int rateStars) {
         int sum;
-        Review newReview = new Review(name, body, author, rateStars);
+        Review newReview = new Review(author, name, body, rateStars);
         ArrayList reviews = this.getReviews();
         if (this.name.equals(this.getName())){
             reviews.add(newReview);

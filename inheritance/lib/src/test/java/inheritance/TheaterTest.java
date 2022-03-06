@@ -10,63 +10,81 @@ import static org.junit.jupiter.api.Assertions.*;
 class TheaterTest {
 
     @Test
-    void getName() {
+    void test_getName() {
+        Theater sut = new Theater("AMC", 3,3);
+        sut.getName();
+        assertEquals("AMC", sut.getName(), "Yo something is wrong with test_getName()");
     }
 
     @Test
-    void setName() {
+    void test_setName() { Theater sut = new Theater("AMC", 3,3);
+        sut.setName("CineMark");
+        assertEquals("CineMark", sut.getName(), "Yo something is wrong with test_setName()");
     }
 
     @Test
-    void getMovies() {
+    void test_getMovies() {
+        Theater sut = new Theater("AMC", 3,3);
+        sut.getMovies();
+        System.out.println(sut.getMovies());
+        assertEquals("[The Matrix: Resurrection, Dog, Spiderman: No Way Home, Blacklight]", sut.getMovies(), "Yo something is wrogn with get Movies");
     }
 
     @Test
-    void setMovies() {
+    void test_setMovies() {
+        Theater sut = new Theater("AMC", 3,3);
+        ArrayList newList = new ArrayList<>(List.of("The Matrix: Resurrection",
+                "Free Guy",
+                "The Power of The Dog",
+                "Blacklight"
+        ));
+        sut.setMovies(newList);
+        System.out.println(sut.reviews);
+        assertEquals("[The Matrix: Resurrection, Free Guy, The Power of The Dog, Blacklight]", sut.getMovies(), "Yo something is wrogn with get Movies");
     }
 
     @Test
-    void getTheaterReviews() {
+    void test_getTheaterReviews() {
     }
 
     @Test
-    void setTheaterReviews() {
+    void test_setTheaterReviews() {
     }
 
     @Test
-    void addMovie() {
+    void test_addMovie() {
         ArrayList<String> myMovies = new ArrayList<>(
                 List.of("The Matrix: Resurrection",
                         "Dog",
                         "Spiderman: No Way Home",
                         "Blacklight"
                 ));
-        Theater sut = new Theater("AMC" );
+        Theater sut = new Theater("AMC" , 3, 3);
         sut.addMovie(myMovies, "Moonfall");
         System.out.println(sut);
         assertTrue(true, "Yo there is something wrong with the test_addMovie()");
     }
 
     @Test
-    void removeMovie() {
+    void test_removeMovie() {
         ArrayList<String> myMovies = new ArrayList<>(
                 List.of("The Matrix: Resurrection",
                         "Dog",
                         "Spiderman: No Way Home",
                         "Blacklight"
                 ));
-        Theater sut = new Theater("AMC" );
+        Theater sut = new Theater("AMC" ,3,3);
         sut.removeMovie(myMovies,"The Matrix: Resurrection");
         System.out.println(sut);
         assertTrue(true, "Yo there is something wrong with the test_removeMovie()");
     }
 
     @Test
-    void addReview() {
+    void test_addReview() {
     }
 
     @Test
-    void testToString() {
+    void test_testToString() {
     }
 
 

@@ -1,7 +1,5 @@
 package inheritance;
 
-import inheritance.reviewable.Reviewer;
-
 import java.util.ArrayList;
 
 public class Shop extends Location  {

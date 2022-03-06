@@ -1,4 +1,4 @@
-package inheritance;
+package inheritance.reviewable;
 
 
 
@@ -21,9 +21,9 @@ public class Review  {
     @Override
     public String toString() {
         return "Review{" +
-                "name=" + name  +
+                "author=" + author  +
+                ", name=" + name  +
                 ", rateStars="+ rateStars +
-                ", author=" + author  +
                 ", body=" + body  +
                 "}";
     }

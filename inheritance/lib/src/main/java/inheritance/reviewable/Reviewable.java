@@ -1,8 +1,6 @@
 package inheritance.reviewable;
 
-import inheritance.Review;
-
-public interface Reviewer {
+public interface Reviewable {
 
 //    public addReview ()
 //    {
