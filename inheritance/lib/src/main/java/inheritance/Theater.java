@@ -1,47 +1,49 @@
-package inheritance.theater;
+package inheritance;
 
-
-import inheritance.reviewable.Reviewer;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Theater implements Reviewer {
-    public static String name;
+public class Theater extends Location {
     public static ArrayList<String> movies;
-    public static ArrayList<Object> theaterReviews;
 
-    public Theater(String name) {
-        this.name = name;
+    public Theater(String name, int stars, int dollarSigns ) {
+       super(name, stars, dollarSigns );
         this.movies = new ArrayList<>(List.of("The Matrix: Resurrection",
                 "Dog",
                 "Spiderman: No Way Home",
                 "Blacklight"
         ));
-        theaterReviews = new ArrayList<>();
 
+    }
+
+    public static ArrayList<String> getMovies() {
+        return movies;
+    }
+
+    public static void setMovies(ArrayList<String> movies) {
+        Theater.movies = movies;
     }
 
     public void addMovie (ArrayList<String> movies, String addedMovie){
         movies.add(addedMovie);
-        this.movies = movies;
+        setMovies(movies);
     }
 
     public void removeMovie (ArrayList<String> movies, String removedMovie){
         movies.remove(removedMovie);
-        this.movies = movies;
+        setMovies(movies);
     }
 
-    @Override
-    public void addReview() {
-        //TODO Build out add review method
-    }
 
     @Override
     public String toString() {
         return "Theater{" +
-                "name=" + name +
-                ", movies=" + movies +
+                "name='" + name + '\'' +
+                ", stars=" + stars +
+                ", dollarSigns=" + dollarSigns +
+                ", movies='" + movies +
+                ", reviews='" + reviews + '\'' +
                 "}";
     }
 }
