@@ -1,23 +1,11 @@
 package inheritance;
 
 
-import inheritance.reviewable.Review;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Theater extends Location {
-    public static String name;
     public static ArrayList<String> movies;
-    public static ArrayList<Object> theaterReviews;
-
-
-
-
-
-    public static void setTheaterReviews(ArrayList<Object> theaterReviews) {
-        Theater.theaterReviews = theaterReviews;
-    }
 
     public Theater(String name, int stars, int dollarSigns ) {
        super(name, stars, dollarSigns );
@@ -26,7 +14,6 @@ public class Theater extends Location {
                 "Spiderman: No Way Home",
                 "Blacklight"
         ));
-        theaterReviews = new ArrayList<>();
 
     }
 
@@ -40,20 +27,23 @@ public class Theater extends Location {
 
     public void addMovie (ArrayList<String> movies, String addedMovie){
         movies.add(addedMovie);
-        this.movies = movies;
+        setMovies(movies);
     }
 
     public void removeMovie (ArrayList<String> movies, String removedMovie){
         movies.remove(removedMovie);
-        this.movies = movies;
+        setMovies(movies);
     }
 
 
     @Override
     public String toString() {
         return "Theater{" +
-                "name=" + name +
-                ", movies=" + movies +
+                "name='" + name + '\'' +
+                ", stars=" + stars +
+                ", dollarSigns=" + dollarSigns +
+                ", movies='" + movies +
+                ", reviews='" + reviews + '\'' +
                 "}";
     }
 }

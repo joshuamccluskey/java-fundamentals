@@ -1,4 +1,4 @@
-package inheritance;
+package inheritance.review;
 
 import org.junit.jupiter.api.Test;
 

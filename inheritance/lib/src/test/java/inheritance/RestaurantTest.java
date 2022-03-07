@@ -1,5 +1,7 @@
 package inheritance;
 
+import inheritance.review.Review;
+import inheritance.review.User;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -50,7 +52,9 @@ class RestaurantTest {
     @Test
     void test_getRestaurantReviews() {
         Restaurant sut = new Restaurant("Rays", 4,4);
-        sut.addReview("Josh","Rays", "This restaurant is so delicious!", 4);
+        User user = new User("Josh");
+        Review review1 = new Review(user,"Rays", "This restaurant is so delicious!", 4);
+        sut.addReview(review1);
         System.out.println(sut);
         assertTrue(true, "Yo there is something wrong with the test_getDollarSigns()");
     }
@@ -59,9 +63,10 @@ class RestaurantTest {
     void test_setRestaurantReviews() {
         Restaurant sut = new Restaurant("Rays", 4,4);
         ArrayList reviews = sut.getReviews();
-        sut.addReview("Josh","Rays", "This restaurant is so delicious!", 4);
+        User user = new User("Josh");
+        Review review1 = new Review(user,"Rays", "This restaurant is so delicious!", 4);
+        sut.addReview(review1);
         sut.setReviews(reviews);
-        sut.addReview("Josh","Bobs", "This restaurent is great!", 3);
         System.out.println(reviews);
         assertTrue(true, "Yo there is something wrong with the test_setDollarSigns()");
 
@@ -70,9 +75,10 @@ class RestaurantTest {
     @Test
     void test_addReview() {
         Restaurant sut = new Restaurant("Rays", 0,4);
-        sut.addReview("Josh","Rays", "This restaurant is so delicious!", 4);
-        sut.addReview("Bob","Jays", "This restaurant is so delicious!", 4);
-        sut.addReview("Mel","Joes", "This is a bad review", 1);
+        User user = new User("Josh");
+        Review review1 = new Review(user,"Rays", "This restaurant is so delicious!", 4);
+        sut.addReview(review1);
+        System.out.println(sut.reviews);
         assertTrue(true, " Yo there is something wrong with the test_addReview()");
     }
 

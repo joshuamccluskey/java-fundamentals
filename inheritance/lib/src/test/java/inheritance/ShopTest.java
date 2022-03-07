@@ -1,8 +1,8 @@
 package inheritance;
 
+import inheritance.review.Review;
+import inheritance.review.User;
 import org.junit.jupiter.api.Test;
-
-import javax.print.attribute.standard.JobSheets;
 
 import java.util.ArrayList;
 
@@ -65,7 +65,9 @@ class ShopTest {
     @Test
     void test_getShopReviews() {
         Shop sut = new Shop ("Bartells", 1,4, "Local Seattle Pharmacy");
-        sut.addReview("Josh","Bartells", "This place is great!", 5);
+        User user = new User("Josh");
+        Review review = new  Review(user,"Bartells", "This place is great!", 5);
+        sut.addReview(review);
         ArrayList reviews = sut.getReviews();
         System.out.println(reviews);
         assertTrue(true,"Yo something is wrong with test_getShopReviews()");
@@ -75,7 +77,9 @@ class ShopTest {
     void test_setShopReviews() {
         Shop sut = new Shop ("Bartells", 1,4, "Local Seattle Pharmacy");
         ArrayList reviews = sut.getReviews();
-        sut.addReview("Josh","Bartells", "This place is great!", 5);
+        User user = new User("Josh");
+        Review review = new  Review(user,"Bartells", "This place is great!", 5);
+        sut.addReview(review);
         sut.setReviews(reviews);
         assertTrue(true, "Yo something is wrong with test_getShopReviews()");
     }
@@ -84,7 +88,9 @@ class ShopTest {
     void test_addReview() {
         Shop sut = new Shop ("Bartells", 1,4, "Local Seattle Pharmacy");
         ArrayList reviews = sut.getReviews();
-        sut.addReview("Josh","Bartells", "This place is great!", 5);
+        User user = new User("Josh");
+        Review review = new  Review(user,"Bartells", "This place is great!", 5);
+        sut.addReview(review);
         assertTrue(true, "Yo something is wrong with test_getShopReviews()");
     }
 
@@ -92,6 +98,6 @@ class ShopTest {
     void testToString() {
         Shop sut = new Shop ("Bartells", 1,4, "Local Seattle Pharmacy");
         System.out.println(sut);
-//        assertEquals("");
+        assertTrue(true, "Yo something is wrong with testToString()");
     }
 }
