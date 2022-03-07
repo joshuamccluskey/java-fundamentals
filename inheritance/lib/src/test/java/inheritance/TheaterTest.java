@@ -1,7 +1,6 @@
 package inheritance;
 
 import inheritance.review.Review;
-import inheritance.review.TheaterReview;
 import inheritance.review.User;
 import org.junit.jupiter.api.Test;
 
@@ -16,7 +15,6 @@ class TheaterTest {
     void test_getName() {
         Theater sut = new Theater("AMC", 3,3);
         sut.getName();
-        System.out.println(sut);
         assertEquals("AMC", sut.getName(), "Yo something is wrong with test_getName()");
     }
 
@@ -58,7 +56,7 @@ class TheaterTest {
     void test_setTheaterReviews() {
         Theater sut = new Theater("AMC" , 3, 3);
         User user = new User("Josh");
-        TheaterReview review = new TheaterReview(user, "AMC", "AMC FTW", 3, "Dog");
+        Review review = new Review(user, "AMC", "AMC FTW", 3);
         sut.addReview(review);
         ArrayList newList =sut.getReviews();
         sut.setReviews(newList);
@@ -97,10 +95,8 @@ class TheaterTest {
     void test_addReview() {
         Theater sut = new Theater("AMC" , 3, 3);
         User user = new User("Josh");
-        TheaterReview review = new TheaterReview(user, "AMC", "AMC FTW", 3, "Dog");
+        Review review = new Review(user, "AMC", "AMC FTW", 3);
         sut.addReview(review);
-        System.out.println(sut);
-        System.out.println(sut.reviews);
         assertTrue(true, "Yo there is something wrong with the test_addReview()");
     }
 

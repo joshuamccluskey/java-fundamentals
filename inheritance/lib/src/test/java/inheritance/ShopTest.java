@@ -98,6 +98,6 @@ class ShopTest {
     void testToString() {
         Shop sut = new Shop ("Bartells", 1,4, "Local Seattle Pharmacy");
         System.out.println(sut);
-        assertTrue(true, "Yo something is wrong with testToString()");
+//        assertEquals("");
     }
 }

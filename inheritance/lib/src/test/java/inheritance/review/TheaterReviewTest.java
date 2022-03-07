@@ -14,7 +14,7 @@ class TheaterReviewTest {
         TheaterReview review = new TheaterReview(user, "AMC", "AMC FTW", 3, "Dog");
         sut.addReview(review);
         System.out.println(review);
-        assertEquals("Dog", review.getMovie(), "Yo something is wrong with the test_getMovie()") ;
+        assertEquals("Dog", review.getMovie(), "Yo something is wrong with the test_getMovie()");
     }
 
     @Test
@@ -23,7 +23,7 @@ class TheaterReviewTest {
         User user = new User("Josh");
         TheaterReview review = new TheaterReview(user, "AMC", "AMC FTW", 3, "Dog");
         sut.addReview(review);
-        assertEquals("Dog", review.getMovie(), "Yo something is wrong with the test_getMovie()") ;
+        assertEquals("Dog", review.getMovie(), "Yo something is wrong with the test_getMovie()");
     }
 
     @Test
@@ -32,6 +32,6 @@ class TheaterReviewTest {
         User user = new User("Josh");
         TheaterReview review = new TheaterReview(user, "AMC", "AMC FTW", 3, "Dog");
         sut.addReview(review);
-        assertTrue(true, "Yo something is wrong with the testToString()") ;
+        assertEquals("Dog", review.getMovie(), "Yo something is wrong with the test_getMovie()");
     }
 }

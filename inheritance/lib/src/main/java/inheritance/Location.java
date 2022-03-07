@@ -71,12 +71,9 @@ public class Location implements Reviewable {
         for (Review rating: reviews) {
            counter++;
            sum += rating.rateStars;
-           System.out.println("sum:"+ sum);
-           System.out.println("counter"+counter);
         }
         average = sum/counter;
-        System.out.println("avergae"+average);
-        this.setStars(Math.round(average));
+        setStars(Math.round(average));
 
     }
 

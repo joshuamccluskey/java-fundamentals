@@ -77,7 +77,9 @@ class RestaurantTest {
         Restaurant sut = new Restaurant("Rays", 0,4);
         User user = new User("Josh");
         Review review1 = new Review(user,"Rays", "This restaurant is so delicious!", 4);
-        sut.addReview(review1);
+        Review review2 = new Review(user,"Bobs", "This restaurant is so delicious!", 4);
+        sut.reviews.add(review1);
+        sut.reviews.add(review2);
         System.out.println(sut.reviews);
         assertTrue(true, " Yo there is something wrong with the test_addReview()");
     }
