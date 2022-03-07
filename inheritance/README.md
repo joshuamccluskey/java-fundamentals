@@ -54,10 +54,4 @@ Work Time: 5 hours
 - Some stretch goals completed updateStars and User Class
 
 
-### Methods
-
-- newShop: adds new instance of a shop
-- newTheater: adds new instance of a theater
-- addReview: interface method to be used by classes to addReviews
-
 Work Time: 8 hours
