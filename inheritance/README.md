@@ -41,3 +41,23 @@ Work Time: 3 Hours
 - addReview: interface method to be used by classes to addReviews
 
 Work Time: 5 hours
+
+## Refactored
+
+### Contributor: Joshua McCluskey
+
+### Collabs: Tony Regalado and Hambalieu Jallow
+
+### Overview:
+
+- Refactored and completed all feature tasks for Lab 06 and Lab 07
+- Some stretch goals completed updateStars and User Class
+
+
+### Methods
+
+- newShop: adds new instance of a shop
+- newTheater: adds new instance of a theater
+- addReview: interface method to be used by classes to addReviews
+
+Work Time: 8 hours
